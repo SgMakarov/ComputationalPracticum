@@ -1,0 +1,25 @@
+{
+  "name": "de",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ascii-math": "latest",
+    "material-ui": "^0.20.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-math": "latest",
+    "react-mathjax2": "0.0.2",
+    "react-plotly.js": "latest",
+    "react-scripts": "0.9.5",
+    "@material-ui/core": "latest",
+    "@material-ui/core": "latest",
+    "@material-ui/core": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
