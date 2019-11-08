@@ -1,7 +1,7 @@
 import Exact from "./Exact";
 import Plot from "react-plotly.js"
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid'
 import MathJax from 'react-mathjax2'
@@ -37,14 +37,15 @@ export default function render() {
         left: 15,
         right: 100
     });
-    let equation = '\\begin{cases} y\' = e^{2x} + e^x + y^2 - 2ye^x,\\\\ x_0 = ' + values.x0 + ',    \\\\ y_0 = ' + values.y0 + '.\\end{cases}';
+    let equation = '\\begin{cases} y\' = e^{2x} + e^x + y^2 - 2ye^x,\\\\ y(' + values.x0 + ') = ' + values.y0 + 
+    ',    \\\\ x \\in [' + values.x0 + ', ' + values.X+'].\\end{cases}';
     let solution = 'y = \\frac{1}{' + Exact.c1(values.x0, values.y0) + ' - x} + e^x';
 
 
     const handleChange = name => event => {
         if (event.target.value !== '')
-            setValues({...values, [name]: parseFloat(event.target.value)});
-        else setValues({...values, [name]: 0.0});
+            setValues({ ...values, [name]: parseFloat(event.target.value) });
+        else setValues({ ...values, [name]: 0.0 });
     };
 
     return (
@@ -60,8 +61,8 @@ export default function render() {
                                 y: Exact.graphSolution(values.N, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Black"},
-                                line: {width: 2},
+                                marker: { color: "Black" },
+                                line: { width: 2 },
                                 name: "Exact"
                             },
                             {
@@ -69,8 +70,8 @@ export default function render() {
                                 y: Euler.graphSolution(values.N, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Red"},
-                                line: {width: 2},
+                                marker: { color: "Red" },
+                                line: { width: 2 },
                                 name: "Euler"
                             },
                             {
@@ -78,8 +79,8 @@ export default function render() {
                                 y: ImprovedEuler.graphSolution(values.N, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Green"},
-                                line: {width: 2},
+                                marker: { color: "Green" },
+                                line: { width: 2 },
                                 name: "Improved Euler"
                             },
                             {
@@ -87,8 +88,8 @@ export default function render() {
                                 y: RungeKutta.graphSolution(values.N, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Blue"},
-                                line: {width: 2},
+                                marker: { color: "Blue" },
+                                line: { width: 2 },
                                 name: "Runge-Kutta"
                             },
                         ]
@@ -98,8 +99,8 @@ export default function render() {
                             width: 650,
                             height: 700,
                             title: 'Graphs',
-                            xaxis: {title: 'x'},
-                            yaxis: {title: 'y'}
+                            xaxis: { title: 'x' },
+                            yaxis: { title: 'y' }
                         }}
                     />
 
@@ -113,8 +114,8 @@ export default function render() {
                                 y: Euler.graphLocal(values.N, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Red"},
-                                line: {width: 2},
+                                marker: { color: "Red" },
+                                line: { width: 2 },
                                 name: "Euler"
                             },
                             {
@@ -122,8 +123,8 @@ export default function render() {
                                 y: ImprovedEuler.graphLocal(values.N, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Green"},
-                                line: {width: 2},
+                                marker: { color: "Green" },
+                                line: { width: 2 },
                                 name: "Improved Euler"
                             },
                             {
@@ -131,8 +132,8 @@ export default function render() {
                                 y: RungeKutta.graphLocal(values.N, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Blue"},
-                                line: {width: 2},
+                                marker: { color: "Blue" },
+                                line: { width: 2 },
                                 name: "Runge-Kutta"
                             },
 
@@ -143,8 +144,8 @@ export default function render() {
                             width: 650,
                             height: 700,
                             title: 'Local Errors',
-                            xaxis: {title: 'x'},
-                            yaxis: {title: 'error'}
+                            xaxis: { title: 'x' },
+                            yaxis: { title: 'error' }
                         }}
                     />
 
@@ -157,8 +158,8 @@ export default function render() {
                                 y: Euler.graphGlobal(values.left, values.right, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Red"},
-                                line: {width: 2},
+                                marker: { color: "Red" },
+                                line: { width: 2 },
                                 name: "Euler"
                             },
                             {
@@ -166,8 +167,8 @@ export default function render() {
                                 y: ImprovedEuler.graphGlobal(values.left, values.right, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Green"},
-                                line: {width: 2},
+                                marker: { color: "Green" },
+                                line: { width: 2 },
                                 name: "Improved Euler"
                             },
                             {
@@ -175,8 +176,8 @@ export default function render() {
                                 y: RungeKutta.graphGlobal(values.left, values.right, values.x0, values.y0, values.X).y,
                                 type: 'scatter',
                                 mode: 'lines',
-                                marker: {color: "Blue"},
-                                line: {width: 2},
+                                marker: { color: "Blue" },
+                                line: { width: 2 },
                                 name: "Runge-Kutta"
                             },
 
@@ -186,8 +187,8 @@ export default function render() {
                             width: 650,
                             height: 700,
                             title: 'Global Errors',
-                            xaxis: {title: 'N'},
-                            yaxis: {title: 'error'}
+                            xaxis: { title: 'N' },
+                            yaxis: { title: 'error' }
                         }}
                     />
 

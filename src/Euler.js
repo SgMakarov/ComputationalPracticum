@@ -1,5 +1,6 @@
-import Function from "./Function";
+
 import ApproximationMethod from "./ApproximationMethod";
+import Function from "./Function";
 
 export default class Euler extends ApproximationMethod {
     static findNext(x, y, h) {

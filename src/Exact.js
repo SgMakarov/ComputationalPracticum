@@ -1,5 +1,3 @@
-import ApproximationMethod from './ApproximationMethod'
-
 export default class Exact {
 
     static c1(x0, y0) {
