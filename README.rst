@@ -38,9 +38,12 @@ Thus, the general solution is:
 
 .. math:: y = e^x + \frac{1}{c_1 - x}
 
-## Part 2: source code
+Part 2: source code
+-------------------
 
-### GUI I used ``React`` javascript framework, ``plotly.js`` for
+GUI
+--- 
+I used ``React`` javascript framework, ``plotly.js`` for
 plotting graphs, ``material-ui`` styles to make the web page better
 looking and ``Mathjax`` library to write formulas with ``tex``. There is
 a list of all my dependencies:
@@ -49,7 +52,7 @@ a list of all my dependencies:
 In my solution there is an ``App.js`` file, which is responsible for the
 whole webpage. It consists of some plots from ``plotly.js``:
 
-\`\`\`js ``You can see, that in plots I assign to fields``\ x\ ``and``
+.. code:: js ``You can see, that in plots I assign to fields``\ x\ ``and``
 y\ ``in``\ Plot\ ``vectors, returned by approximation methods. To approximation methods as arguments I send values, defined by this code:``\ js
 const [values, setValues] = React.useState({ N: 15, x0: 0, y0: 0, X: 5,
 left: 15, right: 100 }); ``and updated by this code:``\ js const
