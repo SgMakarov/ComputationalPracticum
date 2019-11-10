@@ -3,31 +3,32 @@
 ## Author: Sergey Makarov
 ## Preview:
     
-![screen](src/screen.png)
+![](https://i.imgur.com/zeMld43.png)
+
 
 
 ## Part 1: Exact solution 
 
 
-$$y' = e^{2x} + e^x + y^2 - 2ye^x$$
-My equation is the Ricatti one, so we should make a substitution $y = y_0 + z$. As $y_0$ I will take $e^x$, as it is definitely a solution. From this, $y' = z' + e^x$. Now substitute to the intitial equation:
+<p align="center"><img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/84e3d8c83ad291f60b87ca0b147c3f4f.svg?invert_in_darkmode" align=middle width=181.8663pt height=17.399085pt/></p>
+My equation is the Ricatti one, so we should make a substitution <img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/70b61f28e8af29488f2dc72e423fce31.svg?invert_in_darkmode" align=middle width=74.45955pt height=19.17828pt/>. As <img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/14adeddbb1889c9aba973ba30e7bce77.svg?invert_in_darkmode" align=middle width=14.61207pt height=14.15535pt/> I will take <img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/b6b70db98c2a5c2031dea120886f8211.svg?invert_in_darkmode" align=middle width=15.108555pt height=21.8394pt/>, as it is definitely a solution. From this, <img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/f45167ac1d27e822f9411e7ad52c0672.svg?invert_in_darkmode" align=middle width=83.358pt height=24.71634pt/>. Now substitute to the intitial equation:
 
-$$z' + e^x = e^{2x} + e^x + z^2 + 2ze^{x} + e^{2x} - 2 ze^x-2 e^{2x}$$
+<p align="center"><img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/4c7a43a119b3dfb891dd0e798b2cb5ff.svg?invert_in_darkmode" align=middle width=363.0198pt height=15.572667pt/></p>
 simplifying:
 
-$$z' = z^2$$
+<p align="center"><img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/6af8a51776d4fe26e84d5980f5e5eb5c.svg?invert_in_darkmode" align=middle width=49.817295pt height=14.2027875pt/></p>
 
 This is just a separable equation:
 
-$$\frac{dz}{z^2} = dx$$
+<p align="center"><img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/9a445c304eb40fafee2012a803edc1d3.svg?invert_in_darkmode" align=middle width=58.76475pt height=33.81213pt/></p>
 
 Solution of this is:
 
-$$z(x) = \frac{1}{c_1 - x}$$
+<p align="center"><img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/b4adb285675fc20b3075404955ad25e0.svg?invert_in_darkmode" align=middle width=98.412765pt height=35.45586pt/></p>
 
 Thus, the general solution is:
 
-$$y = e^x + \frac{1}{c_1 - x}$$
+<p align="center"><img src="https://rawgit.com/SgMakarov/ComputationalPracticum (fetch/master/svgs/2e17feb336766cd601b4081561c19a38.svg?invert_in_darkmode" align=middle width=112.535445pt height=35.45586pt/></p>
 
  
 
@@ -279,5 +280,7 @@ export default class RungeKutta extends ApproximationMethod {
 
 ## Class diagram:
     
-![diagram](src/DE.jpg)
+![](https://i.imgur.com/hT0hvUx.png)
+
+
 
