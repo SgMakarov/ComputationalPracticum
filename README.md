@@ -3,7 +3,8 @@
 ## Author: Sergey Makarov
 ## Preview:
     
-![screen](src/screen.png)
+![](https://i.imgur.com/zeMld43.png)
+
 
 
 ## Part 1: Exact solution 
@@ -279,5 +280,6 @@ export default class RungeKutta extends ApproximationMethod {
 
 ## Class diagram:
     
-![diagram](src/DE.jpg)
+![](https://i.imgur.com/hT0hvUx.png)
+
 
